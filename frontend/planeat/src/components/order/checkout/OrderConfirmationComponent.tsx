@@ -4,27 +4,27 @@ import {useHistory} from "react-router-dom";
 import { withFormik, FormikProps, FormikErrors, Form } from 'formik';
 
 interface FormValues {
-  phoneNumber: string;
+  code: string;
 }
 
 interface OtherProps {
 }
 
-export default function PhoneNumberComponent() {
+export default function OrderConfirmationComponent() {
   return <Paper>
-    <PhoneNumberForm/>
+    <CodeForm/>
   </Paper>
 }
 
 const InnerForm = (props: OtherProps & FormikProps<FormValues>) => {
   const { touched, errors, isSubmitting } = props;
   const history = useHistory();
-  const handleClick = () => history.push('/order-confirmation');
+  const handleClick = () => history.push('/order-success');
   return (
     <Form>
-      <Typography>Bestätige deine Bestellung mit deiner Telefonnummer</Typography>
-      <TextField name="phoneNumber" variant="outlined" placeholder="Telefonnummer" fullWidth/>
-      {touched.phoneNumber && errors.phoneNumber && <div>{errors.phoneNumber}</div>}
+      <Typography>Gib den per SMS erhaltenen Code ein.</Typography>
+      <TextField name="code" label="code" variant="outlined" placeholder="Code" fullWidth/>
+      {touched.code && errors.code && <div>{errors.code}</div>}
 
       <Button variant="contained" color="primary" type="submit" disabled={isSubmitting} onClick={handleClick}>
         Bestätigungscode senden
@@ -35,22 +35,22 @@ const InnerForm = (props: OtherProps & FormikProps<FormValues>) => {
 
 // The type of props MyForm receives
 interface MyFormProps {
-  initialPhoneNumber?: string;
+  initialCode?: string;
 }
 
-const PhoneNumberForm = withFormik<MyFormProps, FormValues>({
+const CodeForm = withFormik<MyFormProps, FormValues>({
   // Transform outer props into form values
   mapPropsToValues: props => {
     return {
-      phoneNumber: props.initialPhoneNumber || '',
+      code: props.initialCode || '',
     };
   },
 
   // Add a custom validation function (this can be async too!)
   validate: (values: FormValues) => {
     let errors: FormikErrors<FormValues> = {};
-    if (!values.phoneNumber) {
-      errors.phoneNumber = 'Telefonnummer eingeben';
+    if (!values.code) {
+      errors.code = 'Telefonnummer eingeben';
     }
     return errors;
   },

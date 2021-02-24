@@ -9,7 +9,7 @@ import './App.css';
 import PlanningComponent from "./components/order/planning/PlanningComponent";
 import PhoneNumberComponent from "./components/order/checkout/PhoneNumberComponent";
 import OrderSuccessComponent from "./components/order/checkout/OderSuccessComponent";
-import CodeConfirmationComponent from "./components/order/checkout/CodeConfirmationComponent";
+import CodeConfirmationComponent from "./components/order/checkout/OrderConfirmationComponent";
 import DishListComponent from "./components/order/planning/DishListComponent";
 
 function App() {
