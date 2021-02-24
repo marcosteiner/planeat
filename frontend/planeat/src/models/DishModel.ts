@@ -14,6 +14,6 @@ export class DishModel {
   }
 
   static createEmptyDish(): DishModel {
-    return new DishModel("Noch nichts ausgewählt", 0, 0);
+    return new DishModel("Zum auswählen klicken", 0, 0);
   }
 }
