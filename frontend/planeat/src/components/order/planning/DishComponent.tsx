@@ -12,6 +12,7 @@ import {
 import {red} from "@material-ui/core/colors";
 import AddIcon from '@material-ui/icons/Add';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import {DishModel} from "../../../models/DishModel";
 
 const useStyles = makeStyles({
   root: {
@@ -33,9 +34,10 @@ const useStyles = makeStyles({
   },
 });
 
-export default function DishComponent() {
+export default function DishComponent(props: {dish: DishModel}) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
+  const dish = props.dish;
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -44,13 +46,13 @@ export default function DishComponent() {
   return <div>
     <Card className={classes.root}>
       <CardHeader
-        title="Shrimp and Chorizo Paella"
+        title={dish.name}
         subheader="September 14, 2016"
       />
       <CardMedia
         className={classes.media}
-        image="/static/images/acai_bowl.jpg"
-        title="Paella dish"
+        image={dish.imageUrl}
+        title={dish.name}
       />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
