@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/planeat/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/planeat/static/js/main.3dd2d86b.chunk.js",
+    "main.js.map": "/planeat/static/js/main.3dd2d86b.chunk.js.map",
+    "runtime-main.js": "/planeat/static/js/runtime-main.6e545af9.js",
+    "runtime-main.js.map": "/planeat/static/js/runtime-main.6e545af9.js.map",
+    "static/js/2.54c3909a.chunk.js": "/planeat/static/js/2.54c3909a.chunk.js",
+    "static/js/2.54c3909a.chunk.js.map": "/planeat/static/js/2.54c3909a.chunk.js.map",
+    "static/js/3.ed0dc214.chunk.js": "/planeat/static/js/3.ed0dc214.chunk.js",
+    "static/js/3.ed0dc214.chunk.js.map": "/planeat/static/js/3.ed0dc214.chunk.js.map",
+    "index.html": "/planeat/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/planeat/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.54c3909a.chunk.js.LICENSE.txt": "/planeat/static/js/2.54c3909a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6e545af9.js",
+    "static/js/2.54c3909a.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.3dd2d86b.chunk.js"
+  ]
+}
