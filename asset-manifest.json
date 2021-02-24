@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/planeat/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/planeat/static/js/main.3dd2d86b.chunk.js",
-    "main.js.map": "/planeat/static/js/main.3dd2d86b.chunk.js.map",
+    "main.js": "/planeat/static/js/main.2bceaa9e.chunk.js",
+    "main.js.map": "/planeat/static/js/main.2bceaa9e.chunk.js.map",
     "runtime-main.js": "/planeat/static/js/runtime-main.6e545af9.js",
     "runtime-main.js.map": "/planeat/static/js/runtime-main.6e545af9.js.map",
     "static/js/2.54c3909a.chunk.js": "/planeat/static/js/2.54c3909a.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.6e545af9.js",
     "static/js/2.54c3909a.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.3dd2d86b.chunk.js"
+    "static/js/main.2bceaa9e.chunk.js"
   ]
 }
