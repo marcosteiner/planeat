@@ -1,15 +1,11 @@
 import React from 'react';
 import DayComponent from "./DayComponent";
-import {DayModel} from "../../../models/DayModel";
-import {DishModel} from "../../../models/DishModel";
+import MealPlanModel from "../../../models/MealPlanModel";
 
-export default function DayListComponent() {
-  let monday = new DayModel("Montag", new Date(), DishModel.createEmptyDish(), DishModel.createEmptyDish(), DishModel.createEmptyDish())
-  let tuesday = new DayModel("Dienstag", new Date(), DishModel.createEmptyDish(), DishModel.createEmptyDish(), DishModel.createEmptyDish())
-  let wendesday = new DayModel("Mittwoch", new Date(), DishModel.createEmptyDish(), DishModel.createEmptyDish(), DishModel.createEmptyDish())
+export default function DayListComponent(props: {mealPlan: MealPlanModel}) {
+  const mealPlan = props.mealPlan;
+  let days = mealPlan.dayModels.map((day) => <DayComponent day={day}/>)
   return (<div>
-    <DayComponent day={monday}/>
-    <DayComponent day={tuesday}/>
-    <DayComponent day={wendesday}/>
+    {days}
   </div>)
 }

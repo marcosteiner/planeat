@@ -19,7 +19,7 @@ export default function DayComponent(props: {day: DayModel}) {
   let day = props.day
   return <>
     <Card className={classes.dayCard}>
-      <Typography>{day.name}</Typography>
+      <Typography variant="h6">{day.name}</Typography>
       <Meal mealName={"Morgenessen"} dish={day.breakfast}/>
       <Meal mealName={"Mittagessen"} dish={day.lunch}/>
       <Meal mealName={"Abendessen"} dish={day.dinner}/>
@@ -35,8 +35,8 @@ function Meal(props: {mealName: string, dish: DishModel}) {
   const classes = useStyles();
   return <Paper elevation={1} className={classes.mealPaper} onClick={handleClick} >
     <Box display="flex" flexDirection="column" alignItems="flex-start">
-      <Typography variant="caption">{mealName}</Typography>
-      <Typography variant="h6">{dish.name}</Typography>
+      <Typography variant="body1">{mealName}</Typography>
+      <Typography variant="body2">{dish.name}</Typography>
     </Box>
   </Paper>;
 }

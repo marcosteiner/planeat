@@ -30,4 +30,8 @@ export class DayModel {
   get dinner() {
     return this._dinner;
   }
+
+  get calories() {
+    return this._lunch.calories + this._breakfast.calories + this._dinner.calories;
+  }
 }

@@ -1,10 +1,10 @@
 export class DishModel {
   private _name: string;
-  private _calories: Number;
-  private _price: Number;
+  private _calories: number;
+  private _price: number;
   private _imageUrl: string;
 
-  constructor(name: string, calories: Number, price: Number, imageUrl: string) {
+  constructor(name: string, calories: number, price: number, imageUrl: string) {
     this._name = name;
     this._calories = calories;
     this._price = price;
@@ -17,6 +17,10 @@ export class DishModel {
 
   get imageUrl() {
     return this._imageUrl;
+  }
+
+  get calories() {
+    return this._calories;
   }
 
   static createEmptyDish(): DishModel {
